@@ -48,7 +48,7 @@ export default function CustomModal({ id, show, hide }) {
 
   const loadIMDBData = async (id) => {
     const res = await fetch(
-      `http://www.omdbapi.com/?apikey=79fb6e47&i=${id}&plot=full`
+      `https://www.omdbapi.com/?apikey=79fb6e47&i=${id}&plot=full`
     );
     const data = await res.json();
     setSeries(data);
