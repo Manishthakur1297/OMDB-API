@@ -77,7 +77,7 @@ const Index = ({ series, size, error }) => {
 
   const loadNextPage = (title, year, type, page) => {
     return fetch(
-      `http://www.omdbapi.com/?apikey=79fb6e47&s=${title}&y=${year}&type=${type}&page=${page}`
+      `https://www.omdbapi.com/?apikey=79fb6e47&s=${title}&y=${year}&type=${type}&page=${page}`
     ).then((res) => {
       return res.json();
     });
@@ -302,7 +302,7 @@ const Index = ({ series, size, error }) => {
 
 Index.getInitialProps = async () => {
   const res = await fetch(
-    "http://www.omdbapi.com/?apikey=79fb6e47&s=Game&y=&type=series&page=1"
+    "https://www.omdbapi.com/?apikey=79fb6e47&s=Game&y=&type=series&page=1"
   );
   const data = await res.json();
   if (data.Response == "False") {
